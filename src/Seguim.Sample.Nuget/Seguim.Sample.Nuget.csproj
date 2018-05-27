@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);IncludeInternalAssets</TargetsForTfmSpecificBuildOutput>
+
+    <PackageId>Seguim.Sample.Nuget</PackageId>
+    <Title>Seguim Sample Nuget</Title>
+    <Version>1.0.5</Version>
+    <Authors>Fernando Seguim</Authors>
+    <Owners>Fernando Seguim</Owners>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,7 +16,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Seguim.Sample.Nuget.Domain\Seguim.Sample.Nuget.Domain.csproj" />
+    <ProjectReference Include="..\Seguim.Sample.Nuget.Domain\Seguim.Sample.Nuget.Domain.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\Seguim.Sample.Nuget.Infra\Seguim.Sample.Nuget.Infra.csproj" PrivateAssets="All"/>
   </ItemGroup>
+
+  <Target Name="IncludeInternalAssets">
+    <ItemGroup>
+      <BuildOutputInPackage Include="$(OutputPath)Seguim.Sample.Nuget.Domain.dll" />
+      <BuildOutputInPackage Include="$(OutputPath)Seguim.Sample.Nuget.Infra.dll" />
+    </ItemGroup>
+  </Target>
 
 </Project>
