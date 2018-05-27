@@ -1,11 +1,12 @@
 ﻿using System;
+using Seguim.Sample.Nuget.Domain;
 
 namespace Seguim.Sample.Nuget {
     public class Writer {
-        public Writer (string author) {
+        public Writer (Author author) {
             this.Author = author ?? throw new ArgumentNullException(nameof(author));
         }
-        public string Author { get; }
+        public Author Author { get; }
 
         public void Write (string message) {
             Console.WriteLine($"Message: {message}");

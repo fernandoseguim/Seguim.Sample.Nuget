@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Seguim.Sample.Nuget</id>
+    <id>$id$</id>
     <version>1.0.0-alpha</version>
-    <title>Nuget package do Seguim</title>
+    <title> Seguim Sample Nuget</title>
     <authors>Fernando Seguim</authors>
     <owners>Fernando Seguim</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
