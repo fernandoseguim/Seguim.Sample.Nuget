@@ -10,5 +10,13 @@
     <description>Este é um projeto de exemplo de pacote nuget criado com nuspec</description>
     <copyright>Copyright 2018</copyright>
     <tags>nuget dotnet sample</tags>
+
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="11.0.2" />
+    </dependencies>
   </metadata>
+
+  <files>
+    <file src="readme.md" target="" />
+  </files>
 </package>
